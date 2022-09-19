@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quadro Test</title>
+  <meta charset="UTF-8"/>
+</head>
+
+<body>
+
+<label for="hider">Скрыть задание</label>
+<input id="hider" type="checkbox" class="taks-hider"/>
+<div class="task">
+  <h3 class="title">
+    Вам нужно дополнить страницу, в центре которой создать поле для
+    отрисовки детали с помощью «canvas» или «SVG».
+  </h3>
+  <div class="task__step">
+    <img src="./src/1.png"/>
+    <p>
+      В <span>index.js</span> дано исходные параметры детали
+      <span>detail{...}</span> Нужно определить функцию
+      <span>drawDetail()</span> для отрисовки объекта на холсте (как
+      показано на картинке)
+    </p>
+  </div>
+  <div class="task__step">
+    <img src="./src/2.png"/>
+    <p>
+      При изменении радиуса детали она должна перерисоваться (<span>detail.rt.radius = 80</span>)
+    </p>
+  </div>
+  <div class="task__step">
+    <img src="./src/3.png"/>
+    <p>
+      При каждом нажатии кнопки разворота меняем объект и перерисовываем деталь таким образом, чтобы она повернулась на
+      <span>90°</span>
+    </p>
+  </div>
+</div>
+
+
+<div style="margin: 40px auto; text-align: center;">
+  <canvas id="myCanvas">
+  </canvas>
+</div>
+
+<div id="app">
+  <div class="control">
+    <button id="rotateZ">Вращение ⭮</button>
+    <span> Длина детали: </span>
+    <input id="widthInput" placeholder="Длина:" type="text" title="Используйте числовой формат" pattern="^[0-9]+$"
+           required/>
+    <span> Ширина детали: </span>
+    <input id="heightInput" placeholder="Ширина:" type="text" title="Используйте числовой формат" pattern="^[0-9]+$"
+           required/>
+    <span> Радиус правого угла: </span>
+    <input id="rightAngleInput" placeholder="Радиус:" type="text" title="Используйте числовой формат"
+           pattern="^[0-9]+$" required/>
+  </div>
+</div>
+
+<script src="src/index.js"></script>
+
+</body>
+</html>
